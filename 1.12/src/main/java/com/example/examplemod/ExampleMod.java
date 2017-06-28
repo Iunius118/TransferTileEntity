@@ -156,6 +156,7 @@ public class ExampleMod
             TileEntity fixedTile = new TileEntityTest();
             fixedTile.readFromNBT(m_fixedNBT);
             world.setTileEntity(this.getPos(), fixedTile);
+            fixedTile.markDirty();
 
             System.out.println("Replace (tile entity) [" + this.getClass().getName() + "] with [" + fixedTile.getClass().getName() + "] at " + fixedTile.getPos());
         }
